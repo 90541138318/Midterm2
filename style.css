@@ -1,0 +1,206 @@
+/* Remove Browsers default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: Verdana, sans-serif; /* changing default font */
+  display: flex; /* Change the container of the page to flex */
+  flex-direction: column; /* display each element in a new line */
+  min-height: 100vh;
+}
+
+
+/*header {
+  text-align: right;
+  background-color: #a32626;
+  padding: 20px 0;
+}
+
+header nav ul {
+  list-style-type: none; /* removing the bullet points form the link 
+}
+
+header nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav ul li a.active {
+  color: #fff;
+  font-weight: 900;
+}*/header {
+  background-color: #46248f;
+  color: #f99898;
+  padding: 10px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: center; /* Center-aligns the navigation items */
+  align-items: center;
+  margin-right: 550px; /* Vertically centers the navigation items */
+}
+header nav .logo img{
+  height: 40px;
+
+}
+header nav .logo{
+  margin-right: auto;
+  padding-left: 10px;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 60px; /* Adds spacing between navigation items */
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px; /* Adds padding to the navigation links */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+header nav ul li a:hover {
+  background-color: #444; /* Darker background on hover */
+  border-radius: 5px; /* Rounded corners on hover */
+}
+
+header nav ul li a.active {
+  color: #ffcc00;
+}
+
+
+main {
+  flex: 1; /* Fill flex space automatically */
+  padding: 20px;
+}
+
+footer {
+  margin-top: 40px;
+  text-align: center;
+  background-color:red;
+  color: #fff;
+  padding: 20px 0;
+  position: relative;
+  bottom: 0; /* Moving the footer to the bottom of the screen */
+  width: 100%;
+}
+.image1 {
+  max-width: 50%;
+  height: auto;
+  max-height: 200px; /* Set maximum height if needed */
+  /* Additional styling if necessary */
+}
+/* Banner style */
+.banner {
+  text-align: center;
+  padding: 80px 0;
+  background-color: #7fd3e2;
+}
+
+.banners-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.banner-item {
+  background-color: #a5dde6;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #a5dde6;
+}
+
+.banner-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-item p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Add these styles to ensure all images are the same size */
+.banner-item img {
+  width: 100%;
+  max-width: 300px; /* Adjust this to your desired max width */
+  height: 200px; /* Adjust this to your desired height */
+  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
+}
+/* Grid section */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  text-align: center;
+  justify-content: center;
+  column-gap: 40px;
+  row-gap: 30px;
+  margin-top: 40px;
+}
+
+.grid-item {
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(37, 37, 37, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.grid-item:hover {
+  transform: translateY(-5px); /* Moving the grid item or box a few pixels upwards on hover */
+}
+
+
+.full-width {
+  grid-column: span 4; /* Take full width of the grid */
+}
+
+/* Overriding the above defined grid styles for product and about page  */
+.product {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about {
+  box-shadow: none;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about-item {
+  box-shadow: none;
+  text-align: center;
+}
+
+.about-item:hover {
+  transform: none;
+}
+
+.about-item img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 2px solid #333;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.about-item img:hover {
+  border-color: rgb(212, 72, 72);
+}
+
+@media (max-width: 585px) {
+  .grid-item {
+    grid-column: span 4;
+  }
+}
